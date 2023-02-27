@@ -1,0 +1,41 @@
+server:
+  port: ${application.port}
+
+spring:
+  profiles:
+    active: prod   # local-로컬 개발 / dev-테스트 서버 / prod-운영 서버
+  #    active: ${activatedProperties}
+  datasource:
+    url: ${database.url}
+    username: ${database.username}
+    password: ${database.password}
+    driver-class-name: org.mariadb.jdbc.Driver
+    hikari:
+      connection-timeout: ${hikari.connection-timeout}
+      maximum-pool-size: ${hikari.maximum-pool-size}
+      max-lifetime: ${hikari.max-lifetime}
+      pool-name: HikariCP
+  jpa:
+    hibernate.ddl-auto: update
+
+logging:
+  slack:
+    location: ${application.workspace}
+    webhook-uri: https://hooks.slack.com/services/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
+#  level:
+#    org.hibernate:
+#      type.descriptor.sql: trace #show parameter binding
+#      SQL: ${logging.lovel}
+firebase:
+  path: ${firebase.path}
+  key: ${firebase.key}
+
+onf:
+  bizMessages:
+    ONF_0000 : "UserId({0}) - 해당 요청에 대한 권한이 없습니다."
+    ONF_0001 : "{0} - 해당 ID로 조회되는 정보가 없습니다."
+    ONF_0002 : "{0} - 이미 존재하는 ID 입니다."
+    ONF_0003 : "{0} - 테이블에 존재하지 않는 ID 입니다."
+    ONF_0004 : "리액션을 중복으로 등록 할 수 없습니다."
+    ONF_0005 : "비디오 조회 기록을 찾을 수 없습니다."
+    ONF_0006 : "이미 해당 타이틀을 가지고 있습니다."

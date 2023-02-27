@@ -1,0 +1,26 @@
+# 테스트 서버 설정
+application:
+  workspace: DEV
+  port: 8030
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+database:
+  url: jdbc:mariadb://52.40.58.201:3306/vmgo
+  username: devfuse
+  password: fkdlcmdhs0803
+
+hikari:
+  connection-timeout: 180
+  maximum-pool-size: 20
+  max-lifetime: 3000
+
+logging:
+  lovel: INFO
+
+firebase:
+  path: "/home/ubuntu/VMGO-api-java/src/main/resources/vmgo-4168a-firebase-adminsdk-xnmfs-e10840793e.json"
+  key: "AIzaSyAAuwsJKchgm-bwcfVy-sfL69i8tOM4CgQ"
