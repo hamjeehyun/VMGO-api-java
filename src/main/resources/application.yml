@@ -21,7 +21,7 @@ spring:
 logging:
   slack:
     location: ${application.workspace}
-    webhook-uri: https://hooks.slack.com/services/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
+    webhook-uri:
 #  level:
 #    org.hibernate:
 #      type.descriptor.sql: trace #show parameter binding

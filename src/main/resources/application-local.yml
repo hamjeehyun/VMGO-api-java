@@ -9,9 +9,9 @@ spring:
       on-profile: local
 
 database:
-  url: jdbc:mariadb://52.40.58.201:3306/vmgo
-  username: devfuse
-  password: fkdlcmdhs0803
+  url: jdbc:mariadb://
+  username:
+  password:
 
 hikari:
   connection-timeout: 180
@@ -22,8 +22,7 @@ logging:
   lovel: DEBUG
 
 firebase:
-  path: "src/main/resources/vmgo-4168a-firebase-adminsdk-xnmfs-e10840793e.json"
-  key: "AIzaSyAAuwsJKchgm-bwcfVy-sfL69i8tOM4CgQ"
-
+  path: ""
+  key: ""
 
 
